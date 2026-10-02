@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { CATEGORIES } from "@/lib/feeds";
+import { CATEGORIES } from "@/lib/categories";
 
 export default function NewPostPage() {
   const [title, setTitle] = useState("");

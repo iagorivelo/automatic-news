@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Suspense } from "react";
-import { CATEGORIES } from "@/lib/feeds";
+import { CATEGORIES } from "@/lib/categories";
 import { CategoryNav } from "./category-nav";
 
 function todayLong(): string {

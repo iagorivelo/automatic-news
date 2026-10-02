@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getPostBySlug } from "@/lib/posts";
-import { getCategory } from "@/lib/feeds";
+import { getCategory } from "@/lib/categories";
 import { Modal } from "@/components/modal";
 import { PostArticle } from "@/components/post-article";
 

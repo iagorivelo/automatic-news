@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CATEGORIES } from "@/lib/feeds";
+import { CATEGORIES } from "@/lib/categories";
 
 export function SiteFooter() {
   return (
@@ -41,9 +41,8 @@ export function SiteFooter() {
             Sobre
           </h3>
           <p className="mt-4 text-sm leading-relaxed text-muted">
-            Cada post é selecionado e reescrito automaticamente por um robô a
-            partir de feeds RSS, sempre com link para a fonte original. Nada de
-            clickbait, nada de rolagem infinita.
+            Notícias selecionadas por editoria, sempre com link para a fonte
+            original. Nada de clickbait, nada de rolagem infinita.
           </p>
         </div>
       </div>

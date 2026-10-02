@@ -1,5 +1,5 @@
 import { getPosts } from "@/lib/posts";
-import { CATEGORIES, getCategory } from "@/lib/feeds";
+import { CATEGORIES, getCategory } from "@/lib/categories";
 import {
   FeaturedPost,
   PostCard,
@@ -51,8 +51,7 @@ export default async function HomePage({ searchParams }: Props) {
               <em className="text-accent">sem ruído.</em>
             </h1>
             <p className="mt-5 max-w-xl text-pretty leading-relaxed text-muted">
-              {CATEGORIES.length} editorias acompanhadas em tempo real.
-              Curadoria e redação automatizadas, sempre com link para a fonte
+              {CATEGORIES.length} editorias, sempre com link para a fonte
               original.
             </p>
           </>
@@ -63,7 +62,7 @@ export default async function HomePage({ searchParams }: Props) {
         <div className="mb-20 rounded-2xl border border-dashed border-border py-20 text-center text-muted">
           <p className="font-medium">Nenhum post por aqui ainda.</p>
           <p className="mt-1 text-sm">
-            Publique pelo painel admin — manualmente ou com o robô.
+            Publique pelo painel admin.
           </p>
         </div>
       ) : (

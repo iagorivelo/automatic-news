@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { isAdmin } from "@/lib/auth";
 import { createPost, slugExists } from "@/lib/posts";
 import { slugify } from "@/lib/utils";
-import { getCategory } from "@/lib/feeds";
+import { getCategory } from "@/lib/categories";
 
 export async function POST(request: Request) {
   if (!(await isAdmin())) {

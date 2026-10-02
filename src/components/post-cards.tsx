@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Post } from "@/lib/supabase";
-import { getCategory } from "@/lib/feeds";
+import { getCategory } from "@/lib/categories";
 import { formatDate, readingTime } from "@/lib/utils";
 
 function Kicker({ post }: { post: Post }) {

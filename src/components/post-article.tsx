@@ -1,7 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import type { Post } from "@/lib/supabase";
-import { getCategory } from "@/lib/feeds";
+import { getCategory } from "@/lib/categories";
 import { formatDate, readingTime } from "@/lib/utils";
 import { ImageGallery } from "@/components/image-gallery";
 

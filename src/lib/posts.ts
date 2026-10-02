@@ -42,34 +42,6 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   return data ? rowToPost(data) : null;
 }
 
-export async function getPostsBySourceUrls(
-  urls: string[]
-): Promise<Pick<Post, "sourceUrl">[]> {
-  if (urls.length === 0) return [];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const { data, error } = await (supabase
-    .from("posts")
-    .select("source_url")
-    .in("source_url", urls) as any);
-  if (error) throw error;
-  return ((data ?? []) as { source_url: string }[]).map((r) => ({
-    sourceUrl: r.source_url,
-  }));
-}
-
-/** Categorias que já tiveram post do robô criado desde `sinceIso` (para o cron diário) */
-export async function getRobotCategoriesSince(
-  sinceIso: string
-): Promise<string[]> {
-  const { data, error } = await supabase
-    .from("posts")
-    .select("category")
-    .eq("ai_generated", true)
-    .gte("created_at", sinceIso);
-  if (error) throw error;
-  return ((data ?? []) as { category: string }[]).map((r) => r.category);
-}
-
 export async function getRelatedPosts(
   category: string,
   excludeId: string,

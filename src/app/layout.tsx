@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s · Pulso",
   },
   description:
-    "Blog minimalista com as notícias mais relevantes, selecionadas e redigidas automaticamente.",
+    "Blog minimalista com as notícias mais relevantes.",
   openGraph: {
     siteName: "Pulso",
     locale: "pt_BR",

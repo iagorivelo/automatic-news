@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { getPosts } from "@/lib/posts";
-import { CATEGORIES, getCategory } from "@/lib/feeds";
+import { getCategory } from "@/lib/categories";
 import { formatDate } from "@/lib/utils";
-import { RobotPanel } from "./RobotPanel";
 import { PostActions, LogoutButton } from "./actions-client";
 
 export const dynamic = "force-dynamic";
@@ -16,7 +15,7 @@ export default async function AdminPage() {
         <div>
           <h1 className="text-2xl font-bold tracking-tight">Painel</h1>
           <p className="mt-1 text-sm text-muted">
-            Gerencie publicações e acione o robô.
+            Gerencie as publicações.
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -30,25 +29,13 @@ export default async function AdminPage() {
         </div>
       </div>
 
-      <RobotPanel
-        categories={CATEGORIES.map((c) => ({ slug: c.slug, label: c.label }))}
-        auto={{
-          enabled: process.env.ROBOT_AUTO === "true",
-          intervalMinutes: Math.max(
-            5,
-            Number(process.env.ROBOT_INTERVAL_MINUTES) || 60
-          ),
-          cron: Boolean(process.env.CRON_SECRET),
-        }}
-      />
-
       <section className="mt-12">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-muted">
           Publicações ({posts.length})
         </h2>
         {posts.length === 0 ? (
           <p className="mt-4 rounded-xl border border-dashed border-border py-12 text-center text-sm text-muted">
-            Nenhum post ainda. Use o robô acima ou crie um manualmente.
+            Nenhum post ainda. Crie um em “+ Novo post”.
           </p>
         ) : (
           <ul className="mt-4 divide-y divide-border">

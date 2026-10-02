@@ -36,7 +36,7 @@ export default function LoginPage() {
     <div className="mx-auto flex w-full max-w-sm flex-col justify-center px-5 py-24">
       <h1 className="text-2xl font-bold tracking-tight">Área do admin</h1>
       <p className="mt-1 text-sm text-muted">
-        Entre para gerenciar publicações e usar o robô.
+        Entre para gerenciar as publicações.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4">
