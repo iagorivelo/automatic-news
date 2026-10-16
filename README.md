@@ -4,7 +4,7 @@ Blog moderno e minimalista em **Next.js + Tailwind + Supabase**. Leitores acessa
 
 > O robô de notícias automático (RSS + Gemini + cron) foi removido. Os posts que ele já publicou continuam no banco e no ar normalmente.
 
-**Demo:** [automatic-news.vercel.app](https://automatic-news.vercel.app) · **No portfólio:** [iagorivelo.vercel.app/projects/automatic-news](https://iagorivelo.vercel.app/projects/automatic-news)
+**Demo:** [automatic-news.vercel.app](https://automatic-news.vercel.app) · **No portfólio:** [www.iagorivelo.com.br/projects/automatic-news](https://www.iagorivelo.com.br/projects/automatic-news)
 
 ## Como rodar
 
